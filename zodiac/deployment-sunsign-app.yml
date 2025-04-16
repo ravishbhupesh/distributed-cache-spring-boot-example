@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sunsign-deployment
+  labels:
+    app: sunsign-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sunsign-app
+  template:
+    metadata:
+      labels:
+        app: sunsign-app
+    spec:
+      terminationGracePeriodSeconds: 1
+      containers:
+        - name: sunsign-app
+          image: ravishbhupesh/sunsign-app:1.0
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8081

@@ -1,0 +1,11 @@
+app:
+  zodiac:
+    name: Zodiac App
+    version: V4
+    message: This message is from application.yml file
+server:
+  address: 0.0.0.0
+  port: 8080
+logging:
+  level:
+    root: INFO

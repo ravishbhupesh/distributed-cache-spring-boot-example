@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hazelcast-deployment
+  labels:
+    app: hazelcast  # This label should match the selector in the service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hazelcast
+  template:
+    metadata:
+      labels:
+        app: hazelcast
+    spec:
+      containers:
+        - name: hazelcast
+          image: hazelcast/hazelcast:latest
+          ports:
+            - containerPort: 5701

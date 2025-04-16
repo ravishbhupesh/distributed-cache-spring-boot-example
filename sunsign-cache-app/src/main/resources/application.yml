@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: sunsign-cache-app
+  cache:
+    type: hazelcast
+hazelcast:
+  config: classpath:hazelcast.yml
+app:
+  zodiac:
+    name: Sun Sign App
+    version: V1
+    message: This message is from application.yml file
+    client:
+      name: zodiac-client
+      url: http://zodiac-svc:8080
+      #url: http://localhost:30080
+server:
+  address: 0.0.0.0
+  port: 8081
+logging:
+  level:
+    root: INFO

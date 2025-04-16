@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zodiac-deployment
+  labels:
+    app: zodiac-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zodiac-app
+  template:
+    metadata:
+      labels:
+        app: zodiac-app
+    spec:
+      terminationGracePeriodSeconds: 1
+      containers:
+        - name: zodiac-app
+          image: ravishbhupesh/zodiac-app:4.0
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8080
