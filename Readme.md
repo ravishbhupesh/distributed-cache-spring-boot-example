@@ -1,7 +1,7 @@
-# Hazelcast Example
+# Distributed Cache Example
 
 ## Description
-This repository contains the example for Hazelcast cache implementation.
+This repository contains the example for distributed cache implementation for spring boot applications.
 
 ## Repository Structure
 - zodiac-app
