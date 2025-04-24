@@ -2,9 +2,13 @@ spring:
   application:
     name: sunsign-cache-app
   cache:
-    type: hazelcast
-hazelcast:
-  config: classpath:hazelcast.yml
+    type: redis
+  data:
+    redis:
+      host: REDIS_HOST # Change this for your implementation
+      port: 6379
+      password: REDIS_PASSWORD # Change this for your implementation
+      timeout: 2000
 app:
   zodiac:
     name: Sun Sign App
@@ -20,3 +24,6 @@ server:
 logging:
   level:
     root: INFO
+    logging:
+      level:
+        org.springframework.data.redis: DEBUG

@@ -5,7 +5,7 @@ metadata:
   labels:
     app: sunsign-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: sunsign-app
   ports:

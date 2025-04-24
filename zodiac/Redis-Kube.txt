@@ -1,0 +1,5 @@
+# Install redis in kubernetes
+# These commands worked on Docker Desktop(kubernetes)
+
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install my-redis bitnami/redis
